@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --color-lightmode-bg: #efefd0;
+}
+
+/* Spinner Animation */
+
 .spinner {
   border: 4px solid #eee;
   border-top: 4px solid #333;
@@ -17,4 +23,23 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Gradient Background Animation */
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 12s ease infinite;
 }

@@ -6,7 +6,7 @@ const NavLayout = () => {
   return (
     <div>
       <Navbar />
-      <Outlet /> {/* This will render the child routes */}
+      <Outlet />
     </div>
   );
 };

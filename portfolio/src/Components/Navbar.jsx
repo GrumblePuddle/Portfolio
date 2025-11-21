@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="block w-full max-w-screen-lg px-4 py-2 mx-auto text-white bg-white shadow-md rounded-md lg:px-8 lg:py-3 mt-10">
+    <nav className="block w-full max-w-screen-lg px-4 py-2 mx-auto bg-[conic-gradient(at_top,_#f5f1ec,_#e8e3d7,_#f5f1ec)] animate-gradient shadow-md rounded-md lg:px-8 lg:py-3 mt-10">
       <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
         <a
           href="#"
