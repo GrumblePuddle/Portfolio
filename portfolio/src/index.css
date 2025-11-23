@@ -43,3 +43,17 @@
   background-size: 200% 200%;
   animation: gradient 12s ease infinite;
 }
+
+/* Carousel Scroll Animation */
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-carousel-scroll {
+  animation: carousel-scroll 40s linear infinite;
+}
