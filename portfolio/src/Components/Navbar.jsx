@@ -1,31 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Portratt from "../Images/portratt.jpg";
 
 const Navbar = () => {
   return (
-    <nav className="block w-full max-w-screen-lg px-4 py-2 mx-auto bg-[conic-gradient(at_top,_#f5f1ec,_#e8e3d7,_#f5f1ec)] animate-gradient shadow-md rounded-md lg:px-8 lg:py-3 mt-10">
-      <div className="container flex flex-wrap items-center justify-between mx-auto text-slate-800">
-        <a
-          href="#"
-          className="mr-4 block cursor-pointer py-1.5 text-base text-slate-800 font-semibold"
-        >
-          Gustav Liffner
-        </a>
-        <div className="hidden lg:block">
-          <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+    <nav className="w-full px-4 py-4">
+      <div className="mx-auto max-w-screen-lg rounded-2xl bg-[conic-gradient(at_top,_#f5f1ec,_#e8e3d7,_#f5f1ec)] animate-gradient shadow-md overflow-hidden">
+        <div className="flex items-center justify-between">
+          {/* Bilden helt flush mot vänster, top, bottom */}
+          <div className="h-18 w-22 rounded-r-full overflow-hidden">
+            <img src={Portratt} alt="" className="h-full w-full object-cover" />
+          </div>
+
+          {/* Länkar till höger, med padding så att bilden får utrymme */}
+          <ul className="flex items-center gap-10 text-base text-slate-600 pr-8">
+            <li>
               <Link to="/">Landing Page</Link>
             </li>
-            <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+            <li>
               <Link to="/about">About Me</Link>
             </li>
-            <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
+            <li>
               <Link to="/portfolio">Portfolio</Link>
             </li>
-            <li className="flex items-center p-1 text-sm gap-x-2 text-slate-600">
-              <a href="#" className="flex items-center">
-                Contact
-              </a>
+            <li>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
