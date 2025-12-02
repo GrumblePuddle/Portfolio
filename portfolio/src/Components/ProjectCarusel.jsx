@@ -32,13 +32,12 @@ const ProjectCarousel = () => {
           className="
             flex gap-6
             animate-carousel-scroll
-            group-hover:[animation-play-state:paused]
           "
         >
           {items.map((project, index) => (
             <a
               key={project.id + "-" + index}
-              className="shrink-0 w-64 rounded-2xl bg-white shadow-md overflow-hidden"
+              className="shrink-0 w-64 rounded-2xl bg-white shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"
             >
               <div className="h-40 w-full overflow-hidden">
                 <img

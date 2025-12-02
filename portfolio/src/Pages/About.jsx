@@ -10,7 +10,7 @@ const About = () => {
         </h1>
         <div className="flex max-w-screen-lg px-4 py-2 w-full mx-auto">
           <img
-            class="w-96 h-96 mx-auto mt-8 object-cover"
+            className="w-96 h-96 mx-auto mt-8 object-cover"
             src={Portratt}
             alt="image description"
           />

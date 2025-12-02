@@ -57,3 +57,23 @@
 .animate-carousel-scroll {
   animation: carousel-scroll 40s linear infinite;
 }
+
+/* 🔑 Här pausar vi animationen när man hovrar över gruppen */
+.group:hover .animate-carousel-scroll {
+  animation-play-state: paused;
+}
+
+/* Next page animation*/
+
+@keyframes page-scroll {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}
+
+.test {
+  transform: translate(-60%);
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Portratt from "../Images/portratt.jpg";
+import AnimatedLink from "./AnimatedLink";
 
-const Navbar = () => {
+const Navbar = ({ setPageState }) => {
   return (
     <nav className="w-full px-4 py-4">
       <div className="mx-auto max-w-screen-lg rounded-2xl bg-[conic-gradient(at_top,_#f5f1ec,_#e8e3d7,_#f5f1ec)] animate-gradient shadow-md overflow-hidden">
@@ -15,16 +16,24 @@ const Navbar = () => {
           {/* Länkar till höger, med padding så att bilden får utrymme */}
           <ul className="flex items-center gap-10 text-base text-slate-600 pr-8">
             <li>
-              <Link to="/">Landing Page</Link>
+              <AnimatedLink to="/" setPageState={setPageState}>
+                Landing Page
+              </AnimatedLink>
             </li>
             <li>
-              <Link to="/about">About Me</Link>
+              <AnimatedLink to="/about" setPageState={setPageState}>
+                About Me
+              </AnimatedLink>
             </li>
             <li>
-              <Link to="/portfolio">Portfolio</Link>
+              <AnimatedLink to="/portfolio" setPageState={setPageState}>
+                Portfolio
+              </AnimatedLink>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <AnimatedLink to="/contact" setPageState={setPageState}>
+                Contact
+              </AnimatedLink>
             </li>
           </ul>
         </div>
