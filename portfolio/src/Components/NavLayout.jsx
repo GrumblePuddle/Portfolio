@@ -10,9 +10,9 @@ const NavLayout = () => {
 
   const animationClasses = {
     enter:
-      "transform translate-x-0 opacity-100 transition-all duration-700 ease-out",
-    exit: "transform -translate-x-full opacity-0 transition-all duration-500 ease-in",
-    idle: "transform translate-x-0 opacity-100",
+      "transform translate-y-0 opacity-100 transition-all duration-700 ease-out",
+    exit: "transform -translate-y-full opacity-0 transition-all duration-500 ease-in",
+    idle: "transform translate-y-0 opacity-100",
   };
 
   useEffect(() => {
