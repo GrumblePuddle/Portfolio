@@ -30,16 +30,12 @@ const NavLayout = () => {
   }, [location.pathname]);
 
   return (
-    <div className="bg-linear-to-bl from-violet-500 to-fuchsia-500 min-h-screen flex flex-col">
+    <div className="bg-[conic-gradient(at_top,_#f5f1ec,_#e8e3d7,_#f5f1ec)] min-h-screen flex flex-col">
       <Navbar setPageState={setPageState} />
       <div className="flex-1 overflow-hidden relative">
         <div className={animationClasses[pageState]}>
           <Outlet />
         </div>
-      </div>
-      {/* Bottom: fixed carousel */}
-      <div className="fixed bottom-0 left-0 right-0 z-20">
-        <ProjectCarousel />
       </div>
     </div>
   );

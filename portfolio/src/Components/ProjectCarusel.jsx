@@ -1,29 +1,45 @@
 import React from "react";
 
-const projects = [
+const technologies = [
   {
     id: 1,
-    title: "Projekt 1",
-    image: "/images/project1.jpg",
-    link: "/portfolio/project-1",
+    title: "React",
+    icon: "devicon-react-original colored",
   },
   {
     id: 2,
-    title: "Projekt 2",
-    image: "/images/project2.jpg",
-    link: "/portfolio/project-2",
+    title: "TypeScript",
+    icon: "devicon-typescript-plain colored",
   },
   {
     id: 3,
-    title: "Projekt 3",
-    image: "/images/project3.jpg",
-    link: "/portfolio/project-3",
+    title: "JavaScript",
+    icon: "devicon-javascript-plain colored",
   },
-  // lägg till fler projekt...
+  {
+    id: 4,
+    title: "HTML5",
+    icon: "devicon-html5-plain colored",
+  },
+  {
+    id: 5,
+    title: "CSS3",
+    icon: "devicon-css3-plain colored",
+  },
+  {
+    id: 6,
+    title: "Firebase",
+    icon: "devicon-firebase-plain colored",
+  },
+  {
+    id: 7,
+    title: "Node.js",
+    icon: "devicon-nodejs-plain colored",
+  },
 ];
 
 const ProjectCarousel = () => {
-  const items = [...projects, ...projects]; // duplicera för sömlös loop
+  const items = [...technologies, ...technologies]; // duplicera för sömlös loop
 
   return (
     <div className="w-full overflow-hidden py-6">
@@ -34,17 +50,15 @@ const ProjectCarousel = () => {
             animate-carousel-scroll
           "
         >
-          {items.map((project, index) => (
+          {items.map((tech, index) => (
             <a
-              key={project.id + "-" + index}
-              className="shrink-0 w-64 rounded-2xl bg-white shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"
+              key={tech.id + "-" + index}
+              className="shrink-0 w-50 rounded-2xl bg-zinc-900 shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"
             >
-              <div className="h-40 w-full overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover"
-                />
+              <div className="h-30 w-full overflow-hidden">
+                <i
+                  className={`${tech.icon} text-6xl text-center w-full h-full flex items-center justify-center`}
+                ></i>
               </div>
             </a>
           ))}

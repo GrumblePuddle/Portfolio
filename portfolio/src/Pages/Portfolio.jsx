@@ -14,8 +14,8 @@ const Portfolio = () => {
   // In a real application, this data would likely come from an API or database
   const projects = [
     {
-      title: "Project 1",
-      tags: ["#JavaScript", "#React", "#Tailwind", "#CSS"],
+      title: "Midgård",
+      tags: ["#JavaScript", "#React Native", "#Tailwind", "#CSS"],
       info: "This is information about Project 1.",
     },
     {
@@ -100,7 +100,7 @@ const Portfolio = () => {
         {/* Button to toggle the preview of projects */}
         <button
           onClick={changePreview}
-          className="px-6 py-2 font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+          className="px-6 py-2 font-semibold rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
         >
           {previewBtn}
         </button>
@@ -111,7 +111,7 @@ const Portfolio = () => {
           <input
             type="text"
             className="border border-gray-300 rounded-lg px-4 py-2 w-1/3"
-            placeholder="Search tag..."
+            placeholder="Search technology..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -125,8 +125,8 @@ const Portfolio = () => {
           {projects
             .filter((project) =>
               project.tags.some((tag) =>
-                tag.toLowerCase().includes(search.toLowerCase())
-              )
+                tag.toLowerCase().includes(search.toLowerCase()),
+              ),
             )
             .map((project, index) => (
               <Card

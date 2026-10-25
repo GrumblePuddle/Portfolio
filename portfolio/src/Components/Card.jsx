@@ -5,7 +5,7 @@ const Card = ({ pTags, pTitle, onClick }) => {
 
   return (
     <div
-      className="max-w-sm rounded overflow-hidden shadow-lg m-5 hover:scale-105 transition-transform duration-300 ease-in-out hover: cursor-pointer"
+      className="max-w-sm rounded-2xl overflow-hidden shadow-lg m-5 hover:scale-105 transition-transform duration-300 ease-in-out hover: cursor-pointer"
       onClick={onClick}
     >
       <img

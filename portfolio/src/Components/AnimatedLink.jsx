@@ -14,7 +14,7 @@ const AnimatedLink = ({ to, children, setPageState }) => {
   return (
     <button
       onClick={handleClick}
-      className="bg-violet-300 hover:bg-violet-400 text-white font-semibold py-2 px-4 rounded-xl transition-colors duration-300"
+      className=" hover:scale-105 transition-transform duration-300 shadow-md font-semibold py-2 px-4 rounded-xl"
     >
       {children}
     </button>
