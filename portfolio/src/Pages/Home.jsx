@@ -43,16 +43,33 @@ const Home = () => {
     <div>
       <h2 className="text-2xl text-gray-500 text-center mt-30">PORTFOLIO</h2>
       <h1 className="text-6xl font-bold text-center text-shadow-lg/20 text-white">
-        Gustav Liffner{" "}
+        Gustav Liffner<span className="text-violet-400">.</span>
       </h1>
+
       <h2 className="text-2xl text-gray-500 text-center mt-10">
         Frontend Developer
       </h2>
-      <h3 className="text-lg text-gray-500 text-center mt-4">
-        Building modern web and mobile applications
-      </h3>
+      <div className="flex justify-center items-center gap-6 mt-6">
+        <a
+          href="https://github.com/GrumblePuddle"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i className="devicon-github-original text-3xl hover:text-gray-400 transition-colors" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/gustav-liffner-84443a220"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Linkedin"
+        >
+          <i className="devicon-linkedin-plain text-3xl hover:text-gray-400 transition-colors" />
+        </a>
+      </div>
       <div className="w-full overflow-hidden py-6 mt-10">
-        <div className="flex flex-wrap justify-center items-center gap-8 max-w-xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-8 max-w-2/3 mx-auto">
           {technologies.map((tech) => (
             <div key={tech.id}>
               <i className={`${tech.icon} text-6xl`}></i>
@@ -60,7 +77,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-      );
     </div>
   );
 };

@@ -91,7 +91,9 @@ const Portfolio = () => {
   return (
     <div>
       {/* Header section with title and description */}
-      <h1 className="text-3xl font-bold text-center mt-10">My Portfolio</h1>
+      <h1 className="text-5xl font-bold text-center text-shadow-lg/20 text-white mt-10">
+        My Portfolio
+      </h1>
       <p className="text-lg text-center mt-4 max-w-2xl mx-auto">
         Here are some of my projects that I have worked on. Each project
         showcases my skills in web development, design, and problem-solving.
