@@ -1,5 +1,6 @@
 import React from "react";
 import { createPortal } from "react-dom";
+import botVideo from "../videos/aqworlds-bot.mp4"; // Import the video file
 
 const ProjectPopup = ({ pTitle, pInfo, onClick, pTags }) => {
   return createPortal(
@@ -14,6 +15,15 @@ const ProjectPopup = ({ pTitle, pInfo, onClick, pTags }) => {
           onClick={(e) => e.stopPropagation()}
         >
           <h2 className="text-xl font-bold mb-4">{pTitle}</h2>
+          <video
+            src={botVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            onLoadedMetadata={(e) => (e.currentTarget.playbackRate = 2)}
+            className="w-full rounded-lg"
+          />
           <p className="mb-4">{pInfo}</p>
           <span>
             <strong>Languages:</strong>{" "}
