@@ -19,8 +19,8 @@ const Portfolio = () => {
       info: "This is information about Project 1.",
     },
     {
-      title: "Project 2",
-      tags: ["#JavaScript", "#Vite", "#Tailwind"],
+      title: "Game bot",
+      tags: ["#TypeScript", "#Electron", "#Tailwind", "#CSS", "#React"],
       info: "This is information about Project 2.",
     },
     {

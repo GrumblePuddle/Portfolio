@@ -1,13 +1,18 @@
 import React from "react";
+import { createPortal } from "react-dom";
 
 const ProjectPopup = ({ pTitle, pInfo, onClick, pTags }) => {
-  return (
+  return createPortal(
     <div>
       <div
         style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
-        className="fixed inset-0 flex items-center justify-center z-50"
+        className="fixed inset-0 flex items-center justify-center z-[9999]"
+        onClick={onClick}
       >
-        <div className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto">
+        <div
+          className="bg-white rounded-lg shadow-lg p-6 max-w-md mx-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
           <h2 className="text-xl font-bold mb-4">{pTitle}</h2>
           <p className="mb-4">{pInfo}</p>
           <span>
@@ -29,7 +34,8 @@ const ProjectPopup = ({ pTitle, pInfo, onClick, pTags }) => {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 };
 

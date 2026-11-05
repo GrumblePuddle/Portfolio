@@ -39,7 +39,8 @@ const About = () => {
             </p>
 
             <p className="text-slate-600 leading-relaxed">
-              I enjoy working with both frontend and backend technologies
+              I enjoy working with both frontend and backend technologies but my
+              strength lies in frontend development
             </p>
           </div>
 
